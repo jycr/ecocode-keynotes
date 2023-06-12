@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css"
+	      integrity="sha512-Mjxkx+r7O/OLQeKeIBCQ2yspG1P5muhAtv/J+p2/aPnSenciZWm5Wlnt+NOUNA4SHbnBIE/R2ic0ZBiCXdQNUg=="/>
+	<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+	      integrity="sha512-USp+nLNMZ1hR0Ll/LpYDxIq47Ypcm3KfjIleOnyFrB1N5KfHLXjfPQD1wQlhv7kVHRRgPvNVtendDS72LyHviA=="/>
+	<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/sky.min.css"
+	      integrity="sha512-Y5vz+5wI9ALJMccqguHMlI25sV/YjGIBUYr7yOkYm9/TNQoOlWXWtmzfmQoNVVqYLNkt9NHKl+0ODDQ5+VxVIA=="/>
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css"
+	      integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg=="/>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="reveal">
+	<header><p>Présentation générique <span class="todo">Titre à modifier par le nom de l'événement</span></p></header>
+	<div class="slides">
+		<section data-slide-class="title-slide">
+			<h1><img src="media/ecocode_vertical.inv.svg" alt="ecoCode" style="height:70vh"/></h1>
+		</section>
+		<section class="cv linkedin">
+			<h3>Qui suis-je ?</h3>
+			<p>Nom de l’intervenant</p>
+			<div class="todo">Expérience à modifier</div>
+			<ul>
+				<li>Enseignant-Chercheur en Informatique
+					<ul class="list-item-green">
+						<li>Collège STEE (Sciences & Technologies pour l’Energie et l’Environnement)</li>
+					</ul>
+				</li>
+				<li>Recherche en Software Engineering
+					<ul class="list-item-green">
+						<li>Comment construire des logiciels + verts ?</li>
+					</ul>
+				</li>
+				<li>Responsable du module Android en Master 2
+					<ul class="list-item-green">
+						<li>Cours en ligne sur SlideShare (130k vues)</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section data-slide-class="title-slide">
+			<h2>Accords de Paris sur le climat&nbsp;: &lt;&nbsp;+2°C</h2>
+			<p class="subtitle">l'industrie du numérique doit faire sa part</p>
+			<aside class="notes">
+				compatible avec la trajectoire 2°C (Accords de Paris)
+			</aside>
+		</section>
+		<section>
+			<h3>Ébriété numérique mobile</h3>
+			<table class="no-border-row cards" style="font-size:.8em">
+				<thead>
+				<tr>
+					<th style="width:25%">Applications disponibles</th>
+					<th style="width:25%">Téléchargements d’apps annuel</th>
+					<th style="width:25%">Utilisateurs de smartphones</th>
+					<th style="width:25%">Comportement</th>
+				</tr>
+				</thead>
+				<tbody style="background-image:url(media/lines.svg);background-position: 50% 50%;background-size: calc(100vw - 6em)">
+				<tr>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">2,87</span>
+								millions
+							</strong>
+							Google Play Store
+							<img src="media/google-play-store.svg" alt="" class="logo"/>
+						</div>
+					</td>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">110</span>
+								milliards
+							</strong>
+							Google Play Store
+							<img src="media/google-play-store.svg" alt="" class="logo"/>
+						</div>
+					</td>
+					<td rowspan="2">
+						<div class="card">
+							<strong>
+								<span class="number">6,92</span>
+								milliards
+							</strong>
+							<ul>
+								<li>72% Android</li>
+								<li>27% iOS</li>
+								<li>1% autres</li>
+							</ul>
+						</div>
+					</td>
+					<td rowspan="2">
+						<div class="card">
+							<strong>
+								<span class="number">5</span>
+								heures / jour
+							</strong>
+							<span class="logo">⏳</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">1,96</span>
+								millions
+							</strong>
+							iOS Apple Store
+							<img src="media/apple-app-store.svg" alt="" class="logo"/>
+						</div>
+					</td>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">33</span>
+								milliards
+							</strong>
+							iOS Apple Store
+							<img src="media/apple-app-store.svg" alt="" class="logo"/>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<aside class="notes">
+				<p>Non seulement le parc croît rapidement (4 milliards en 2017, 6,7 milliards en 2023, soit 9 % par an (Cisco, 2020) dans les pays développés (fréquence de renouvellement du smartphone inférieure à 2ans), 7,8 milliards
+					d’humains sur terre (--> nouveau continent Cf. vincent, ½ humains ---> inégalité pays developpé ou non) aggravé par le covid</p>
+				<p>On comprend l’intérêt de cibler Android</p>
+				<p>Sources :</p>
+				<ul>
+					<li><a href="https://buildfire.com/app-statistics/">Mobile App Download Statistics & Usage Statistics (2023) - BuildFire</a></li>
+					<li><a href="https://www.statista.com/statistics/271644/worldwide-free-and-paid-mobile-app-store-downloads/">Annual number of mobile app downloads worldwide 2022 | Statista</a></li>
+					<li><a href="https://www.20minutes.fr/high-tech/3218291-20220117-un-humain-passe-en-moyenne-4-8-heures-par-jour-sur-son-smartphone">L'homme passe près de cinq heures par jour sur son mobile (20minutes.fr)</a></li>
+				</ul>
+			</aside>
+		</section>
+		<section>
+			<h3>Ébriété numérique web</h3>
+			<table class="no-border-row cards" style="font-size:.8em">
+				<thead>
+				<tr>
+					<th style="width:25%">Sites web disponibles</th>
+					<th style="width:25%">Sites web visités</th>
+					<th style="width:25%">Connexions quotidiennes</th>
+					<th style="width:25%">Comportement</th>
+				</tr>
+				</thead>
+				<tbody style="background-image:url(media/line.svg);background-position: 50% 50%;background-size: calc(100vw - 10em)">
+				<tr>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">1,93</span>
+								milliards
+							</strong>
+							sites web en ligne
+							<span class="logo">🌐</span>
+						</div>
+					</td>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">100</span>
+								Site web / jour
+							</strong>
+							par utilisateur
+							<span class="logo">🌐</span>
+						</div>
+					</td>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">5,25</span>
+								milliards
+							</strong>
+							sur Internet
+							<span class="logo">🛜</span>
+						</div>
+					</td>
+					<td>
+						<div class="card">
+							<strong>
+								<span class="number">2,8</span>
+								heures / jour
+							</strong>
+							<span class="logo">⏳</span>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<aside class="notes">
+				Source : <a href="https://www.sales-hacking.com/post/statistiques-internet">➤ Internet : Statistiques et Chiffres Clés (2023) (sales-hacking.com)</a>
+			</aside>
+		</section>
+		<section data-background-image="media/earth.svg" data-background-size="60%">
+			<h3>Décarboner le numérique</h3>
+			<div style="display:grid;grid-template-areas:'a a' 'b c';font-size: 0.6em;row-gap: 4em;column-gap: 10em">
+				<div style="grid-area:a">
+					<h4>Éditeurs de logiciels</h4>
+					<p>Développer des apps web et mobiles moins énergivores</p>
+					<p>Ne pas accentuer l’obsolescence matérielle</p>
+				</div>
+				<div style="grid-area:b">
+					<h4>Fournisseurs</h4>
+					<p>Indice de réparabilité</p>
+					<p>Eco-rating</p>
+					<p>OS optimisés pour l’énergie</p>
+					<p>Batteries nouvelle génération (graphène, lithium-soufre)</p>
+				</div>
+				<div style="grid-area:c">
+					<h4>Utilisateurs finaux</h4>
+					<p>Appliquer des “éco-gestes” :</p>
+					<ul>
+						<li>Acheter en reconditionné</li>
+						<li>Limiter son temps d’écran</li>
+						<li>Activer le mode économie d’énergie dès que possible</li>
+						<li>...</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h3>Ordres de grandeur</h3>
+			<div style="
+				display: grid;
+				grid: 'a b c d' 'a e f d';
+				font-size: .8em;
+				grid-template-columns:1fr 11em 11em 1fr;
+				grid-template-rows:1fr auto;
+				background-image: url(media/balance.svg);
+				background-size:12em;
+				background-position: 50% 0;
+			">
+				<h4 style="padding-top: 5.2em">
+					<span style="
+						grid-area: b;
+						background-color: #49B878;
+						color:#FFF;
+						text-transform: uppercase;
+						border-radius: .5em;
+						padding: .2em .5em;
+						font-size: .8em;
+					">Production</span>
+				</h4>
+				<div style="grid-area: a">
+					<h4>éco-conception MATÉRIELLE</h4>
+					<p>considère le cycle de vie des pc/smartphones/tablettes, de la fabrication à la gestion des déchets et au recyclage</p>
+					<p style="font-size: 5em">💧🪨</p>
+				</div>
+				<div style="
+					grid-area: e;
+					border-radius: 1em 0 0 1em;
+					border-style: solid none solid solid;
+					border-width: 2px;
+					border-color: #78C1FE;
+					padding: 0.5em;
+					background-color: #FFF;
+				">
+					<strong style="font-size:1.5em;display:block">90%</strong>
+					de la consommation d’énergie<br/>
+					<small>(et son corollaire en <abbr title="Gaz à Effet de Serre">GES</abbr>)</small>
+				</div>
+				<h4 style="padding-top: 2.2em">
+					<span style="
+						grid-area: c;
+						background-color: #49B878;
+						color:#FFF;
+						text-transform: uppercase;
+						border-radius: .5em;
+						padding: .2em .5em;
+						font-size: .8em;
+					">Utilisation</span>
+				</h4>
+				<div style="grid-area:d;">
+					<h4>éco-conception LOGICIELLE</h4>
+					<p>vise à réduire la consommation d’énergie des apps web et mobiles pendant leur phase d’usage. Garantit la rétrocompatibilité</p>
+					<p style="font-size: 5em">🔋</p>
+				</div>
+				<div style="
+					grid-area: f;
+					border-radius: 0 1em 1em 0;
+					border-style: solid solid solid none;
+					border-width: 2px;
+					border-color: #78C1FE;
+					padding: 0.5em;
+					background-color: #FFF;
+				">
+					<strong style="font-size:1.5em;display:block">10%</strong>
+					de la consommation d’énergie<br/>
+					<small>(et son corollaire en <abbr title="Gaz à Effet de Serre">GES</abbr>)</small>
+				</div>
+			</div>
+			<aside class="notes">
+				l’essentiel de la consommation d’énergie se situe en phase de production :
+				<a href="https://theshiftproject.org/wp-content/uploads/2018/11/Rapport-final-v8-WEB.pdf">90 % contre 10 % pour son utilisation, et leur corollaire en GES</a>
+			</aside>
+		</section>
+		<section>
+			<h3>Énergie en phase d’usage (smartphones)</h3>
+
+			<p>
+				<em>Hypothèse :</em> un <i lang="en">smartphone</i> moyenne gamme (batterie : <strong>3,6V</strong> ; capacité : <strong>3000mAh</strong>) qui consomme toute sa batterie chaque jour
+			</p>
+			<ul>
+				<li>Consommation d'énergie journalière : 3Ah × 3,6V = <strong>10Wh</strong></li>
+				<li>Consommation annuelle : <strong>3,65kWh</strong></li>
+			</ul>
+
+			<div class="nota-bene">
+				<p>
+					Avec <strong>6,3 milliards</strong> de smartPhones actifs dans le monde,<br/>
+					la consommation annuelle atteint <strong>23 Térawatt-heure</strong>.
+				</p>
+				<ul class="list-item-green">
+					<li>≅ consommation électrique de l’Islande (18 TWh en 2019)</li>
+					<li>La facture énergétique va fatalement s'accroître avec 7,33 milliards de smartphones prévus pour 2025...</li>
+				</ul>
+			</div>
+			<aside class="notes">
+				<p>
+					500 cycles charge/décharge avant qu’on observe les premiers signes de faiblesse</br>
+					1,5e+13 watt
+				</p>
+				<p><a href="https://fr.countryeconomy.com/energie-et-environnement/electricite-consommation/islande">18.679 Gwh en 2019</a><br/>
+					The Shift Project avait calculé 20,3TWh</p>
+				<p>Nombre de smartphones en 2025 -&gt;<br/>
+					<a href="https://www.comptoir-hardware.com/actus/business/46167-les-derniers-chiffres-du-smartphone-en-europe-et-au-comptoir-ca-donne-quoi-.html">Les derniers chiffres du smartphone en Europe... Et au Comptoir, ça donne
+						quoi ? - Le comptoir du hardware</a>.</p>
+			</aside>
+		</section>
+		<section>
+			<h3>Énergie en phase d’usage (ordinateurs)</h3>
+
+			<p style="text-align: left">
+				<em>Hypothèse :</em></p>
+			<ul>
+				<li>un ordinateur de bureau : consommation électrique moyenne entre <strong>75 et 730 kWh</strong> (en fonction de son utilisation)</li>
+				<li>un ordinateur portable : consommation électrique moyenne entre <strong>20 et 275 kWh par an</strong></li>
+			</ul>
+
+			<div class="nota-bene">
+				<p>
+					Pour 2022, avec <strong>4,4 milliards</strong> d’ordinateurs de bureau et <strong>1 milliard</strong> d'ordinateur portable dans le monde, la consommation annuelle est estimée entre <strong>350 et 3 427
+					Térawatt-heure</strong>.
+				</p>
+				<ul class="list-item-green">
+					<li>≅ consommation électrique annuelle du Royaume-Uni (312 TWh en 2019) + de l’Inde (1403 TWh en 2019)</li>
+				</ul>
+			</div>
+			<aside class="notes">
+				<p>Consommation pc : 💬1 - Quelle est la consommation électrique d’un ordinateur ? (hellowatt.fr)</p>
+				<p>Nombre de pc en 2022 -&gt;
+					<a href="https://hardware.developpez.com/actu/313991/La-base-installee-des-appareils-informatiques-dans-le-monde-atteindra-6-2-milliards-d-unites-en-2021-poussee-par-le-travail-a-distance-et-hybride-selon-les-previsions-de-Gartner/">La
+						base installée des appareils informatiques dans le monde atteindra 6,2 milliards d'unités en 2021, poussée par le travail à distance et hybride, selon les prévisions de Gartner</a></p>
+				<p><a href="https://en.wikipedia.org/wiki/Electric_energy_consumption">Consommation des pays : Electric energy consumption - Wikipedia</a></p>
+			</aside>
+		</section>
+		<section style="height: 100%;padding: 1em 0">
+			<h3>Mais qu’est ce qui vide la batterie ?</h3>
+			<p class="center full-screen">
+				<span style="position:absolute;font-size: 10em;opacity:.1;">📱</span>
+				<span style="position: relative;font-size: 4em;">🪫</span>
+			</p>
+
+			<ul class="grid full-screen" style="column-gap:5em">
+				<li class="center">
+					<strong>Connectivité</strong>
+					<span>Wifi / radios / NFC / Bluetooth</span>
+				</li>
+				<li class="center">
+					<strong>Écran</strong>
+					<span>LCD, (AM)OLED</span>
+				</li>
+				<li class="center">
+					<strong>Capteurs</strong>
+					<span>Gyroscope, accéléromètre, …</span>
+				</li>
+				<li class="center">
+					<strong>Caméra</strong>
+					<span>Frontale, arrière / Flash</span>
+				</li>
+				<li class="center">
+					<strong>Géolocalisation</strong>
+					<span>Puce GPS / Galileo</span>
+				</li>
+				<li class="center">
+					<strong>Chipset</strong>
+					<span>CPU, RAM, I/O</span>
+				</li>
+			</ul>
+			<aside class="notes">
+				<p>Selon vous, quel est le TOP 1 ?</p>
+				<p>Ça diffère de beaucoup de travaux qui ne considèrent que le chipset. Nous, on considère autre chose</p>
+			</aside>
+		</section>
+		<section>
+			<h3>Notre combat en tant que développeur !</h3>
+			<p>En tant que développeur, la conception <strong>matérielle n’est pas notre</strong> métier !</p>
+			<p>Se focaliser pour réduire les 10% d'impact sur l'usage du numérique en proposant de meilleurs solutions logicielles tout en limitant le besoin de changement matériel.</p>
+		</section>
+		<section>
+			<h3>De l’intérêt des applications "eco-friendly"</h3>
+			<p>Une application web ou mobile qui gaspille de précieux micro-watts :</p>
+			<ol>
+				<li>réduit la durée de vie de l’appareil car la batterie a un nombre de cycles charge/décharge limité</li>
+				<li>a un effet cumulatif important, à chaque exécution et sur chaque appareil où l’application est installée / le site web est exécuté.</li>
+				<li>peut créer des utilisateurs mécontents qui notent négativement l’application sur les magasins ou ne reviennent pas sur la page web cible.</li>
+			</ol>
+			<aside class="notes">
+				<p>C’est le logiciel qui gouverne le matériel qui consomme.</p>
+				<ol>
+					<li>or on a vu que c’est le fait de conserver son matériel qui est efficace</li>
+					<li>certaines applis sont téléchargées + d’un 1 milliard de fois</li>
+					<li>Depuis 2017, Google Play store dégrade la note des apps en fonction du % d’occupation de la batterie</li>
+				</ol>
+			</aside>
+		</section>
+		<section>
+			<h3>Eco-conception logicielle</h3>
+			<p>Concevoir des sites web et applications en gardant à l’esprit qu’elles ont une empreinte écologique. Former la nouvelle génération de développeurs à l’éco-conception (Cf. loi REEN).</p>
+			<div class="cite">
+				<blockquote>
+					Les mesures relatives à l'écoconception des services numériques sont très faibles aujourd'hui.
+					Quand on est formé au développement, on est peu sensibilisé à « l'écologie du code » ; il est nécessaire d'avancer sur ce sujet-là.
+				</blockquote>
+				<p class="origin"><strong>Cédric O</strong>, secrétaire d'État chargé de la transition numérique et des communications électroniques (décembre 2020)</p>
+			</div>
+		</section>
+		<section>
+			<h3>L’éco-conception est un tout...</h3>
+			<p>Une application web ou mobile c’est un programme <strong>côté client</strong> uniquement.</p>
+			<p>ecoCode s’adresse également à l’analyse des programmes <strong>côté serveur</strong> et à <strong>l’infrastructure</strong> afin de traiter le plus largement <strong>les services du numérique</strong>.</p>
+			<div style="font-size: 1.5em">
+				<div class="blue"
+				     data-connect-to=".ecoCode-platform"
+				     data-connect-style="stroke-width:3px;stroke:#2D62E0"
+				>ecoCode</div>
+				<div style="margin: 1em">
+					<div class="green ecoCode-platform">Client</div>
+					<div class="green ecoCode-platform">Serveur</div>
+					<div class="green ecoCode-platform">Infrastructure</div>
+				</div>
+			</div>
+			<aside class="notes">
+				<p>Même problème pour les évaluations des sites Web (eco-index, ...)</p>
+				<p>exemple de la page d'accueil de NetFlix</p>
+				<p>App répartie = travail réparti</p>
+			</aside>
+		</section>
+		<section data-slide-class="title-slide">
+			<h2>Comment agir ?</h2>
+		</section>
+		<section>
+			<h3>Les leviers d’action</h3>
+			<ul>
+				<li>Dégraisser les fonctionnalités des applications est sans conteste le gisement d’économie le plus fort, mais exige une étude ad-hoc
+					<ul>
+						<li>Mesurer, comprendre, arbitrer</li>
+					</ul>
+				</li>
+				<li>Améliorer la qualité du code des applications a un impact plus modeste, mais est systématisable à l’ensemble de la production logicielle mondiale
+					<ul>
+						<li>Analyse et correction automatique</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Agissez là où vous le pouvez</h3>
+			<ul class="scene" style="
+			    display: flex;
+			    flex-direction: column-reverse;
+			    margin: 0 auto;
+			">
+				<li class="shape">
+					<div style="opacity:.4" class="face box-front">Gestion optimisée de l’énergie par l’OS</div>
+					<div style="opacity:.4" class="face box-bottom">Doze Mode, App Standby, Adaptive Battery</div>
+					<div style="opacity:.4" class="face box-left"></div>
+				</li>
+				<li class="shape">
+					<div class="face box-front">Empreinte énergétique des langages et de leur runtime</div>
+					<div class="face box-bottom">Java, Php, JS, Python</div>
+					<div class="face box-left"></div>
+				</li>
+				<li class="shape">
+					<div class="face box-front">Empreinte énergétique des surcouches : environnement et framework</div>
+					<div class="face box-bottom">Angular, React, Android Framework</div>
+					<div class="face box-left"></div>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Trouver les racines du mal n’est pas simple</h3>
+			<div style="display:grid;grid-template-columns:1fr 1fr;font-size:.6em">
+				<figure>
+					<figcaption>
+						<img class="inline" src="media/logo-android.svg" alt="Android"/>
+						Energy Profiler (Android Studio)
+					</figcaption>
+					<img style="height:12em"
+					     src="media/screenshot_android_energy_profiler.png"
+					     alt="Capture d'écran d'Android Energy Profiler"
+					/>
+				</figure>
+				<figure>
+					<figcaption>
+						<img class="inline" src="media/logo-ios.svg" alt="iOS"/>
+						Energy Profiler (Xcode)
+					</figcaption>
+					<img style="height:12em"
+					     src="media/screenshot_ios_energy_profiler.png"
+					     alt="Capture d'écran d'iOS Energy Profiler"
+					/>
+				</figure>
+				<figure>
+					<figcaption>
+						<img class="inline" src="media/logo-macos.svg" alt="macOS"/>
+						Activity Monitor
+					</figcaption>
+					<img style="height:12em"
+					     src="media/screenshot_macos_activity_monitor.png"
+					     alt="Capture d'écran de MacOS Activity Monitor"
+					/>
+				</figure>
+				<figure>
+					<figcaption>
+						<img class="inline" src="media/logo-windows.svg" alt="Windows"/>
+						Task manager
+					</figcaption>
+					<img style="height:12em"
+					     src="media/screenshot_windows_task_manager.png"
+					     alt="Capture de Windows task manager"
+					/>
+				</figure>
+			</div>
+		</section>
+		<section>
+			<h3>Code smells ?</h3>
+			<blockquote>Code Smells are patterns of code that suggest there might be a problem, that there might be a better way of writing the code or that more design perhaps should go into it.</blockquote>
+			<ul>
+				<li>Concept popularisé via le Clean Code</li>
+				<li>N’est pas un bug car n’empêche pas le programme de fonctionner</li>
+				<li>Les bad smells contribuent à la dette technique</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Energy code smells</h3>
+			<p>Pourquoi ne pas appliquer ce concept à l’efficience énergétique ? (a fortiori sur des terminaux limités par leur batterie)</p>
+			<ul>
+				<li>Détecter les structures de code “pas terribles” pour la batterie</li>
+				<li>Les smells se nichent potentiellement partout : code source, fichiers de configuration, fichiers de définition de build, ressources organisées (layouts, images, …)</li>
+				<li>Évaluer le temps nécessaire pour y remédier (rembourser la dette technique)</li>
+				<li>Les corriger automatiquement si possible</li>
+			</ul>
+		</section>
+		<section>
+			<h3>ecoCode - 89 Energy Code Smells</h3>
+			<p>ecoCode/RULES.md at main · green-code-initiative/ecoCode (github.com)</p>
+			<table>
+				<thead>
+				<tr>
+					<th></th>
+					<th scope="col">Java</th>
+					<th scope="col">PHP</th>
+					<th scope="col">JS</th>
+					<th scope="col">Python</th>
+					<th scope="col">Rust</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">✅ Available rules</th>
+					<td>19</td>
+					<td>8</td>
+					<td>1</td>
+					<td>6</td>
+					<td>0</td>
+
+				</tr>
+				<tr>
+					<th scope="row">🚧 In progress</th>
+					<td>1</td>
+					<td>2</td>
+					<td>4</td>
+					<td>2</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">🚀 Identified rules</th>
+					<td>4</td>
+					<td>4</td>
+					<td>18</td>
+					<td>6</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<th scope="row">⌛ Awaiting specifications rules</th>
+					<td>6</td>
+					<td>1</td>
+					<td>9</td>
+					<td>9</td>
+					<td>1</td>
+				</tr>
+				</tbody>
+			</table>
+			<p style="text-align: right">En date du 28/04/2023</p>
+		</section>
+		<section>
+			<h3>Code Smell Themes</h3>
+			<p>Le projet ecoCode s’articule selon différentes thématiques :</p>
+			<table class="themes">
+				<thead>
+				<tr>
+					<th>Platforms</th>
+					<th>Langages</th>
+					<th>Frameworks</th>
+					<th>Infrastructure</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li class="green">Android</li>
+							<li class="green">iOS</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li class="green">Java</li>
+							<li class="green">PHP</li>
+							<li class="green">JS</li>
+							<li class="green">Python</li>
+							<li class="green">Swift</li>
+							<li class="grey">Rust</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li class="grey">Spring Boot</li>
+							<li class="grey">Angular</li>
+							<li class="grey">React</li>
+							<li class="grey">VueJS</li>
+						</ul>
+					</td>
+					<td>
+						<ul class="themes">
+							<li class="grey">Kubernetes</li>
+						</ul>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<dl class="themes">
+				<dt class="green">&nbsp;</dt>
+				<dd>Thème déjà abordé</dd>
+				<dt class="grey">&nbsp;</dt>
+				<dd>Thème non abordé à ce jour</dd>
+			</dl>
+		</section>
+		<section>
+			<h3>ecoCode-mobile - 40 Energy Code Smells</h3>
+			<p>http://olegoaer.perso.univ-pau.fr/android-energy-smells/</p>
+			<table>
+				<thead>
+				<tr>
+					<th></th>
+					<th>Android</th>
+					<th>iOS</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th>✅ Available rules</th>
+					<td>42</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<th>🚧 In progress</th>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>🚀 Identified rules</th>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>⌛ Awaiting specifications rules</th>
+					<td>11</td>
+					<td>13</td>
+				</tr>
+				</tbody>
+			</table>
+			<p>En date du 28/04/2023</p>
+		</section>
+		<section>
+			<h3>Energy Code Smells par l’exemple</h3>
+			<p>Keep CPU On</p>
+			<pre><code data-trim data-noescape data-line-numbers class="wrap">
+PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
+WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyApp::MyWakelockTag");
+wakeLock.acquire();
+			</code></pre>
+		</section>
+		<section>
+			<h3>Energy Code Smells par l’exemple</h3>
+			<h4>Requêtes SQL à l’intérieur d’une boucle</h4>
+			<figure style="position:absolute;right:0">
+				<img src="media/screenshot_code-smell_sql_loop.png" alt="Capture d'écran - extrait de la bonne pratique du CNUMR"/>
+			</figure>
+			<div style="width:75%;position:absolute;text-align:left">
+				<p>Ne pas écrire …</p>
+				<pre><code data-trim data-noescape data-line-numbers class="wrap">
+foreach ($userList as $user) {
+&nbsp;&nbsp;$query = 'INSERT INTO users (ﬁrst_name,last_name) VALUES("'. $user['ﬁrst_name'] .'", "'. $user['last_ name'] .'")';
+&nbsp;&nbsp;mysql_query($query);
+}
+			</code></pre>
+				<p>Mais préférer …</p>
+				<pre><code data-trim data-noescape data-line-numbers class="wrap">
+$userData = array();
+foreach ($userList as $user) {
+&nbsp;&nbsp;$userData[] = '("'. $user['ﬁrst_name'] .'", "'.
+&nbsp;&nbsp;$user['last_name'] .'")';
+}
+$query = 'INSERT INTO users (ﬁrst_name,last_name) VALUES'. implode(',', $userData);
+mysql_query($query);
+			</code></pre>
+			</div>
+		</section>
+		<section data-slide-class="title-slide">
+			<h2>Outils pour le développeur</h2>
+			<p class="subtitle">Computer-Aided Software Engineering (CASE)</p>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Un plugin SonarQube</h3>
+			<ul class="list-item-green">
+				<li>SonarQube est l’outil de qualité de code le plus <strong>populaire</strong> du marché</li>
+				<li><strong>Analyse statique</strong> de code : le programme n’est jamais exécuté !</li>
+				<li>Totalement <strong>indépendant</strong> de la taille, de la catégorie et des fonctionnalités</li>
+				<li>Un <strong>eco-score</strong> (de A à E) peut être attribué</li>
+				<li>Comparaison différentielle automatisée via un <strong>pipeline CI/CD</strong></li>
+				<li>S’adresse aux <strong>développeurs / chefs de projets / lead devs / …</strong></li>
+			</ul>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Base de règles</h3>
+			<figure>
+				<img src="media/screenshot_ecocode_rules.png" alt="capture d'écran de la liste des règles intégrées dans SonarQube"/>
+			</figure>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Projets analysés</h3>
+			<figure>
+				<img src="media/screenshot_ecocode_projects.png" alt="capture d'écran de la liste des projets dans SonarQube"/>
+			</figure>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Qualité verte d’un projet</h3>
+			<figure>
+				<img src="media/screenshot_ecocode_qualitygate.png" alt="capture d'écran d'une barrière qualité pour un projet'"/>
+			</figure>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Problèmes détectés</h3>
+			<figure>
+				<img src="media/screenshot_ecocode_issues.png" alt="capture d'écran de la liste des problèmes détectés par SonarQube"/>
+			</figure>
+		</section>
+		<section>
+			<p><strong>ecoCode</strong></p>
+			<h3>Détail d’un problème</h3>
+			<figure>
+				<img src="media/screenshot_ecocode_issue.png" alt="capture d'écran du détail d'un problèmes détecté par SonarQube"/>
+			</figure>
+		</section>
+	</div>
+	<footer><p>Support 2023 – v0.2</p></footer>
+</div>
+
+<script crossorigin="anonymous" referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"
+        integrity="sha512-9dFFU5pcR8K4bvw4ng6mLMW5IjslYbA57amHEMtHn3TT9RkKivsDabKffqjUUJ4pCaojAyH05T1OESld199Gcw=="
+></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"
+        integrity="sha512-MZ7Ehjbh2soaeCZJGaw6vBNAa7+eunl0SUmRPNESchLlboH73lHLEeUa6pZJ2Pcui4NcpDFatr6M+VlcmaH1QA=="
+></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"
+        integrity="sha512-yov8LabSFTQgFrb/4/hhVYXR2zdZRXiMPj2M/gGPPBBpHdbMDDzKXnOcuiAYsXEsmpKucbl8qadb7Fp3nh5kqA=="
+></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"
+        integrity="sha512-RCedMo/DOyawQOh4zYtqEHTZAfgrrVQctN3LVCX5kELGsN52TOdwZ8inRY0l9Mo4vtyDFn6oOAgRUilWXgb+wA=="
+></script>
+<script src="drawing.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
