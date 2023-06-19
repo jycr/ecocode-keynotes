@@ -10,6 +10,21 @@ function updateBodyClass(activeSlide) {
 	}
 }
 
+function onSlideDisplayed(slide) {
+	updateBodyClass(slide);
+	let drawing;
+	if(!slide.dataset.drawing){
+		slide.querySelectorAll("[data-connect-to]").forEach(source=>{
+			if(!drawing) { drawing = new Drawing(); }
+			drawing.addLineFor(source);
+		});
+		if(drawing) {
+			drawing.toCssImg(slide);
+		}
+		slide.dataset.drawing = slide.style.backgroundImage;
+	}
+}
+
 // More info about initialization & config:
 // - https://revealjs.com/initialization/
 // - https://revealjs.com/config/
@@ -31,19 +46,9 @@ Reveal
 	.then(() => {
 		bodyClassList = Array.from(document.body.classList);
 		console.log("bodyClassList:", bodyClassList);
-		updateBodyClass(document.querySelector("section.present"));
+		onSlideDisplayed(document.querySelector("section.present"));
 		Reveal.on('slidechanged', event => {
-			updateBodyClass(event.currentSlide);
-		});
-		document.querySelectorAll("section").forEach(slide=>{
-			let drawing;
-			slide.querySelectorAll("[data-connect-to]").forEach(source=>{
-				if(!drawing) { drawing = new Drawing(); }
-				drawing.addLineFor(source);
-			});
-			if(drawing) {
-				drawing.toCssImg(slide);
-			}
+			onSlideDisplayed(event.currentSlide);
 		});
 	});
 
