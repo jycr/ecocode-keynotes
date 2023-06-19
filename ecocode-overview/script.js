@@ -45,7 +45,6 @@ Reveal
 	})
 	.then(() => {
 		bodyClassList = Array.from(document.body.classList);
-		console.log("bodyClassList:", bodyClassList);
 		onSlideDisplayed(document.querySelector("section.present"));
 		Reveal.on('slidechanged', event => {
 			onSlideDisplayed(event.currentSlide);
